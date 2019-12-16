@@ -33,19 +33,20 @@ public class Hello {
     public static int sockMerchant(int n, int[] ar) {
         int[] arPair;
         int result = 0;
-        ArrayList<> processed = new ArrayList<Integer>();
+        ArrayList<Integer> processed = new ArrayList<Integer>();
 
 
 
         //iterar o array
-        for (int i=0;i<ar.length; i++){
+       // for (int i=0;i<ar.length; i++){
+        for (int i : ar){
             //verificar se o item iterado já foi processado se ja foi ignora e vai para o proximo
-            if (processed.indexOf(ar[i]) == -1){
+            if (processed.indexOf(i) == -1){
                 //para cada item achar quanto se repete
-                int item = ar[i];
+                int item = i;
                 int qtdRepetition = 0;
-                for (int ii=0;ii<ar.length;ii++){
-                    if (item == ar[ii]){
+                for (int ii : ar ){
+                    if (item == ii){
                         qtdRepetition += 1;
                     }
                 }
